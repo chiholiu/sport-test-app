@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button } from "./Components/Button";
-import { Input } from "./Components/Input";
-import { ReviewBlock } from "./Components/ReviewBlock";
+import { Button } from "./Components/Button/Button";
+import { Input } from "./Components/Input/Input";
+import { ReviewBlock } from "./Components/ReviewBlock/ReviewBlock";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import ReactStars from "react-rating-stars-component";
 
 const Review = ({ reviews, getProductId }) => {
+  console.log(reviews);
   if (reviews == undefined || getProductId == undefined) return;
 
   if (reviews.length < 1) {
@@ -18,6 +19,9 @@ const Review = ({ reviews, getProductId }) => {
 
   const [openForm, setOpenForm] = useState(false);
   const [starRating, setStarRating] = useState("");
+  const ratingChanged = newRating => setStarRating(newRating);
+  const previousPage = () => history.goBack();
+  const showForm = () => setOpenForm(true);
   let input;
 
   const postReview = async review => {
@@ -34,14 +38,11 @@ const Review = ({ reviews, getProductId }) => {
       .then(response => {
         console.log(response.data);
       })
+
       .catch(error => {
         console.log(error);
       });
   };
-
-  const ratingChanged = newRating => setStarRating(newRating);
-  const previousPage = () => history.goBack();
-  const showForm = () => setOpenForm(true);
 
   const submitForm = (e, reviewComment) => {
     e.preventDefault();
@@ -57,7 +58,7 @@ const Review = ({ reviews, getProductId }) => {
     <div>
       <div>
         <ReviewBlock reviewContent={reviews} />
-        <button onClick={() => showForm()}>Add Review</button>
+        <button onClick={() => showForm()}>Post</button>
         {openForm && (
           <form
             onSubmit={e => {

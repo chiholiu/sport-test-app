@@ -1,12 +1,13 @@
-import React from 'react';
-import { SearchInput } from "../View/HomePage/SearchInput/SearchInput";
+import React from "react";
+import { SearchInput } from "../View/HomePage/Navbar/SearchInput/SearchInput";
 import Products from "../View/HomePage/Products/Products";
+import { Container } from "./HomePage.styles";
 
 export const HomePage = () => {
-	return (
-		<div>
-			<SearchInput />
-			<Products />
-		</div>
-	);
+  return (
+    <Container>
+      <SearchInput />
+      <Products />
+    </Container>
+  );
 };

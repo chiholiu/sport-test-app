@@ -5,6 +5,17 @@ import { useDispatch } from "react-redux";
 import { getData, getId } from "../../../../actions/index";
 import axios from "axios";
 import PropTypes from "prop-types";
+import {
+  ProductPage,
+  ProductTiles,
+  ProductArticleNumber,
+  ProductDescription,
+  ProductImage,
+  ProductName,
+  ProductPrice,
+  Border,
+  Column
+} from "./Products.styles";
 
 const Products = ({ allProducts, findText }) => {
   if (allProducts == undefined || findText == undefined) return;
@@ -23,24 +34,31 @@ const Products = ({ allProducts, findText }) => {
   }, [dispatch]);
 
   return (
-    <ul>
+    <ProductPage>
       {allProducts
         .filter(u => u.id.includes(findText))
-        .map(({ currency, description, id, imgUrl, name, price }) => (
+        .map(({ description, id, imgUrl, name, price }) => (
           <Link
             key={id}
             to={`/product/${id}`}
             onClick={() => dispatch(getId(id))}
           >
-            <div>{currency}</div>
-            <div>{id}</div>
-            <div>{description}</div>
-            <img src={imgUrl} alt={name} />
-            <div>{name}</div>
-            <div>{price}</div>
+            <ProductTiles>
+              <Column>
+                <ProductImage src={imgUrl} alt={name} />
+                <ProductName>{name}</ProductName>
+              </Column>
+              <Border />
+              <Column>
+                <ProductArticleNumber>Article Number {id}</ProductArticleNumber>
+                <ProductDescription>{description}</ProductDescription>
+                <ProductPrice>€ 10{price} ,-</ProductPrice>
+              </Column>
+            </ProductTiles>
+            {/* <Border /> */}
           </Link>
         ))}
-    </ul>
+    </ProductPage>
   );
 };
 
