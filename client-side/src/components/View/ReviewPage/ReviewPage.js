@@ -57,7 +57,7 @@ const Review = ({ reviews, getProductId }) => {
     <div>
       <div>
         <ReviewBlock reviewContent={reviews} />
-        <button text="Add Review" onClick={() => showForm()} />
+        <button onClick={() => showForm()}>Add Review</button>
         {openForm && (
           <form
             onSubmit={e => {
@@ -70,7 +70,7 @@ const Review = ({ reviews, getProductId }) => {
               inputRef={node => (input = node)}
             />
             <ReactStars size={20} edit={true} onChange={ratingChanged} />
-            <Button text="Post Review" />
+            <button>Add Review</button>
           </form>
         )}
       </div>
