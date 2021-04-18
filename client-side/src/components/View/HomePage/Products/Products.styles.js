@@ -8,7 +8,6 @@ export const ProductPage = styled.ul`
   flex-direction: column;
   ${breakpoint.md`
     flex-wrap: wrap;
-    border: 1px solid red;
     flex-direction: row;
   `};
 `;
