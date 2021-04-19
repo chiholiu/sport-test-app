@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "../../../../../styles/BreakPoint";
 
-export const ReviewContainer = styled.p`
+export const ReviewContainer = styled.div`
   width: 100%;
   text-transform: capitalize;
 `;

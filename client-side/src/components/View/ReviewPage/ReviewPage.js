@@ -63,9 +63,7 @@ const Review = ({ reviews, getProductId }) => {
   return (
     <ReviewPage>
       <ReviewPageContainer>
-        <Button className="align-left" clickPage={() => previousPage()}>
-          Go Back
-        </Button>
+        <Button clickPage={() => previousPage()}>Go Back</Button>
         <ReviewBlock reviewContent={reviews} />
         <ReviewForm>
           {openForm && (

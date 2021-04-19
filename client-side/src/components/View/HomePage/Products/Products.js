@@ -22,13 +22,9 @@ const Products = ({ allProducts, findText }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const header = {
-      "Access-Control-Allow-Origin": "*",
-      "content-type": "application/json"
-    };
     try {
       const fetchData = async () => {
-        const res = await axios(`http://localhost:3001/product`, header);
+        const res = await axios(`http://localhost:3001/product`);
         dispatch(getData(res.data));
       };
       fetchData();
@@ -73,8 +69,8 @@ function mapStateToProps(state) {
 }
 
 Products.propTypes = {
-  allProducts: PropTypes.object,
-  findText: PropTypes.any
+  allProducts: PropTypes.array,
+  findText: PropTypes.array
 };
 
 export default connect(mapStateToProps)(Products);

@@ -24,5 +24,5 @@ export const CustomerReview = ({ reviewContent }) => {
 };
 
 CustomerReview.propTypes = {
-  reviewContent: PropTypes.array
+  reviewContent: PropTypes.object
 };

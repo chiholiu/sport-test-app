@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { filterProduct } from "../../../../../actions/index";
-import { Navbar, Input } from "./SearchInput.styles";
+import { Input } from "./SearchInput.styles";
 
 export const SearchInput = () => {
   const dispatch = useDispatch();
@@ -11,12 +11,10 @@ export const SearchInput = () => {
   };
 
   return (
-    <Navbar>
-      <Input
-        aria-label="search-input"
-        placeholder="Search"
-        onChange={e => getSearch(e.target.value)}
-      />
-    </Navbar>
+    <Input
+      aria-label="search-input"
+      placeholder="Search"
+      onChange={e => getSearch(e.target.value)}
+    />
   );
 };

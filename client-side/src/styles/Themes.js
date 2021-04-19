@@ -4,30 +4,15 @@ const theme = {
    * The naming of the color in the 'color.js' file are derived from the color naming scheme from the [Invision design pages](https://projects.invisionapp.com/d/main#/console/18319900/380486614/inspect).
    */
   colors: {
-    transparent: "transparent",
-    white: "#FFFFFF",
-    transparentWhite: "#FFFFFF1A",
-    lightWhite: "#FAFAFA",
-    darkWhite: "#F7F7F7",
     black: "#000000",
-    lightBlack: "#202020",
-    darkBlack: "#111111",
-    transparentGrey: "#2020206e",
-    ultraTransparentGrey: "#20202002",
     semiDarkGrey: "#888888",
     darkGrey: "#454545",
+    lightBlack: "#202020",
     defaultGrey: "#ebedee",
-    transparentDarkGrey: "#45454573",
-    red: "#E30616",
-    darkRed: "#93002A",
-    transparentRed: "#e306174d",
-    brown: "#450002",
-    blue: "#3BACD7",
-    darkBlue: "#042E77",
-    lightBlue: "#1E9FD0",
-    purple: "#6E438B",
-    orange: "#E8442D",
-    yellow: "#FFD220"
+    transparent: "transparent",
+    white: "#FFFFFF",
+    darkBlack: "#111111",
+    red: "#E30616"
   },
   // typography
   fontWeights: {
