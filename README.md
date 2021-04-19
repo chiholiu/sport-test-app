@@ -20,7 +20,6 @@ You'll find there the collection that is run.
 - [Redux](https://redux.js.org/)
 - [Eslint](https://eslint.org/)
 - [Styled-components](https://styled-components.com/)
-- [Jest](https://jestjs.io/)
 - [Enzyme](https://enzymejs.github.io/enzyme/)
 
 ## Available Scripts
