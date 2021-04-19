@@ -74,7 +74,7 @@ const Review = ({ reviews, getProductId }) => {
               }}
             >
               <Input
-                placeHolderMsg="Place Review"
+                placeholder="Place review"
                 inputRef={node => (input = node)}
                 onChange={e => setInputValue(e.target.value)}
               />
