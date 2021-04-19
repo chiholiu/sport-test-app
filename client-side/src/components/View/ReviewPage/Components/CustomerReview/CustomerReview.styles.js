@@ -6,12 +6,14 @@ export const ReviewListId = styled.p`
   color: ${({ theme }) => theme.colors.semiDarkGrey};
   font-size: 10px;
 `;
+
 export const ReviewListContainer = styled.div`
   padding: 20px 0;
   ${breakpoint.md`
    padding: 20px;
   `}
 `;
+
 export const ReviewList = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.lightBlack};
   width: 100%;
@@ -22,6 +24,7 @@ export const ReviewList = styled.div`
     width: 400px;
   `}
 `;
+
 export const ReviewListText = styled.div`
   font-weight: ${({ theme }) => theme.fontWeights.extraBold};
   padding-top: 10px;
