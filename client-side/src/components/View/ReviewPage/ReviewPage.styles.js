@@ -19,6 +19,7 @@ export const Form = styled.form`
   margin: 30px auto;
   div {
     outline: none;
+    margin-bottom: 10px;
   }
 `;
 
