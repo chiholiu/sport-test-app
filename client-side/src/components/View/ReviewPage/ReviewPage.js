@@ -29,7 +29,9 @@ const Review = ({ reviews, getProductId }) => {
   let input;
 
   const postReview = async review => {
-    const headers = { "Content-Type": "text/plain" };
+    const headers = {
+      "content-type": "application/json"
+    };
 
     await axios
       .post(
@@ -91,148 +93,10 @@ const Review = ({ reviews, getProductId }) => {
 
 const mapStateToProps = state => {
   return {
-    reviews: {
-      currency: "",
-      price: 0,
-      id: "FI444",
-      name: "product",
-      description: "description",
-      imgUrl:
-        "https://assets.adidas.com/images/w_320,h_320,f_auto,q_auto:sensitive,fl_lossy/6634cf36274b4ea5ac46ac4e00b2021e_9366/Superstar_Shoes_Black_FY0071_01_standard.jpg",
-      reviews: [
-        {
-          productId: "FI444",
-          locale: "en-US",
-          rating: 5,
-          text: "this product is the bestaaaa"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US",
-          rating: 2,
-          text: "Amazing!"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US",
-          rating: 2,
-          text: "Love it!"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US",
-          rating: 4,
-          text: "The best product for the athlete"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US",
-          rating: 2,
-          text: "Fantastic!"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US",
-          rating: 1,
-          text: "high quality!"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US",
-          rating: 2,
-          text: "Best tech summit talk!"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        },
-        {
-          productId: "FI444",
-          locale: "en-US"
-        }
-      ]
-    },
-
-    // reviews:
-    //   state.productData.products.find(
-    //     item => item.id === state.productData.productId
-    //   ) || [],
+    reviews:
+      state.productData.products.find(
+        item => item.id === state.productData.productId
+      ) || [],
     getProductId: state.productData.productId || []
   };
 };

@@ -22,9 +22,13 @@ const Products = ({ allProducts, findText }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const header = {
+      "Access-Control-Allow-Origin": "*",
+      "content-type": "application/json"
+    };
     try {
       const fetchData = async () => {
-        const res = await axios(`http://localhost:3001/product`);
+        const res = await axios(`http://localhost:3001/product`, header);
         dispatch(getData(res.data));
       };
       fetchData();
