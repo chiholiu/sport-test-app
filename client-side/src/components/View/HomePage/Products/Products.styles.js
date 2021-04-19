@@ -3,10 +3,11 @@ import { breakpoint } from "../../../../styles/BreakPoint";
 
 export const ProductPage = styled.ul`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.defaultGrey};
   display: flex;
   flex-direction: column;
+  background-color: ${({ theme }) => theme.colors.defaultGrey};
   ${breakpoint.md`
+    padding-top: 10px;
     flex-wrap: wrap;
     flex-direction: row;
   `};
@@ -24,8 +25,8 @@ export const ProductTiles = styled.div`
     border-left: 2px solid ${({ theme }) => theme.colors.transparent};
     border-bottom: 2px solid ${({ theme }) => theme.colors.transparent};
     border-right: none;
-    flex: 0 0 33.33%;
-    &@media(hover: hover) and (pointer: fine) {
+    flex: 0 0 25%%;
+    &:hover {
       border-left: 2px solid ${({ theme }) => theme.colors.black};
       border-bottom: 2px solid ${({ theme }) => theme.colors.black};
     }

@@ -6,18 +6,18 @@ export const Navbar = styled.nav`
   top: 0;
   position: fixed;
   height: 4rem;
-  background-color: ${({ theme }) => theme.colors.black};
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
+  background-color: ${({ theme }) => theme.colors.black};
   ${breakpoint.md`
-    height: 7rem;
+    height: 5rem;
   `};
 `;
 
 export const Input = styled.input`
-  color: ${({ theme }) => theme.colors.darkGrey};
   font-size: 1.2rem;
   padding: 3px 6px;
+  color: ${({ theme }) => theme.colors.darkGrey};
 `;

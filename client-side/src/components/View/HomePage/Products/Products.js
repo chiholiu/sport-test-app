@@ -55,7 +55,6 @@ const Products = ({ allProducts, findText }) => {
                 <ProductPrice>€ 10{price} ,-</ProductPrice>
               </Column>
             </ProductTiles>
-            {/* <Border /> */}
           </Link>
         ))}
     </ProductPage>

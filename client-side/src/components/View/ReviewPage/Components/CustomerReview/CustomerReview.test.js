@@ -2,17 +2,17 @@ import React from "react";
 import history from "../../../../history";
 import { Router } from "react-router-dom";
 import { shallow } from "enzyme";
-import { Button } from "./Button";
+import { CustomerReview } from "./CustomerReview";
 import { Provider } from "react-redux";
 import { store } from "../../../../Store";
 
-test("Check button exists", () => {
-  const button = shallow(
+test("Check if component CustomerReview exists", () => {
+  const customerReview = shallow(
     <Provider store={store}>
       <Router history={history}>
-        <Button />
+        <CustomerReview />
       </Router>
     </Provider>
   );
-  expect(button).toHaveLength(1);
+  expect(customerReview).toHaveLength(1);
 });

@@ -3,7 +3,8 @@ import { types } from "../actions";
 const initialState = {
   products: [],
   searchText: "",
-  filteredProducts: []
+  filteredProducts: [],
+  productId: []
 };
 
 export const productData = (state = initialState, action) => {
