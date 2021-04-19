@@ -29,9 +29,12 @@ export const ReviewArticleNumber = styled.p`
 
 export const ReviewImage = styled.img`
   width: 100%;
-  max-width: 350px;
+  max-width: 280px;
   margin-left: auto;
   margin-right: auto;
+  ${breakpoint.md`
+    max-width: 350px;
+  `}
 `;
 
 export const ReviewName = styled.div`
@@ -49,10 +52,11 @@ export const ReviewPrice = styled.p`
 
 export const Column = styled.div`
   flex: 0 0 50%;
-  padding: 20px 20px 40px 20px;
+  padding: 20px;
   text-align: center;
   ${breakpoint.md`
     text-align: left;
+    padding: 20px 20px 40px 20px;
   `}
 `;
 

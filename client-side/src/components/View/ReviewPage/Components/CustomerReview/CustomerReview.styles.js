@@ -7,9 +7,9 @@ export const ReviewListId = styled.p`
   font-size: 10px;
 `;
 export const ReviewListContainer = styled.div`
-  padding: 20px;
+  padding: 20px 0;
   ${breakpoint.md`
-   padding: 20px 0;
+   padding: 20px;
   `}
 `;
 export const ReviewList = styled.div`

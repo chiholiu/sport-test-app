@@ -45,11 +45,13 @@ export const Button = styled.button`
   &:disabled {
     cursor: unset;
   }
-  &:not([disabled]):hover,
-  &:not([disabled]):focus {
-    background-color: ${({ theme }) => theme.colors.semiDarkGrey};
-    color: ${({ theme }) => theme.colors.black};
-    outline: none;
+  @media (hover: hover) and (pointer: fine) {
+    &:not([disabled]):hover,
+    &:not([disabled]):focus {
+      background-color: ${({ theme }) => theme.colors.semiDarkGrey};
+      color: ${({ theme }) => theme.colors.black};
+      outline: none;
+    }
   }
   .align-left {
     margin-left: auto;

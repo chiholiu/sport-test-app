@@ -47,6 +47,7 @@ export const ProductDescription = styled.p`
 export const ProductImage = styled.img`
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 20px;
   ${breakpoint.md`
     max-width: 250px;
   `};
