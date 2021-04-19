@@ -82,7 +82,11 @@ const Review = ({ reviews, getProductId }) => {
               <Button disabled={submit}>Send</Button>
             </Form>
           )}
-          <Button onClick={() => showForm()}>Add Review</Button>
+          {openForm ? (
+            ""
+          ) : (
+            <Button onClick={() => showForm()}>Add Review</Button>
+          )}
         </ReviewForm>
       </ReviewPageContainer>
     </ReviewPage>
