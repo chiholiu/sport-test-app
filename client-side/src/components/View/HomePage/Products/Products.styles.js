@@ -5,11 +5,13 @@ export const ProductPage = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.defaultGrey};
   ${breakpoint.md`
     padding-top: 10px;
     flex-wrap: wrap;
     flex-direction: row;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   `};
 `;
 
@@ -59,7 +61,7 @@ export const ProductName = styled.p`
   border-radius: 30px;
   background-color: ${({ theme }) => theme.colors.black};
   color: ${({ theme }) => theme.colors.white};
-  width: 80px;
+  width: 150px;
   padding: 3px;
   position: absolute;
   margin-left: auto;
@@ -68,6 +70,10 @@ export const ProductName = styled.p`
   right: 0;
   text-align: center;
   margin-top: 5px;
+  ${breakpoint.md`
+    padding-left: 20px;
+    padding-right: 20px;
+  `};
 `;
 
 export const ProductPrice = styled.p`

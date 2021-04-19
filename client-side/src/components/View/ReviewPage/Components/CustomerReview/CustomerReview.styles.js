@@ -8,6 +8,9 @@ export const ReviewListId = styled.p`
 `;
 export const ReviewListContainer = styled.div`
   padding: 20px;
+  ${breakpoint.md`
+   padding: 20px 0;
+  `}
 `;
 export const ReviewList = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.lightBlack};

@@ -12,7 +12,7 @@ const theme = {
     transparent: "transparent",
     white: "#FFFFFF",
     darkBlack: "#111111",
-    red: "#E30616"
+    red: "#eb0400"
   },
   // typography
   fontWeights: {

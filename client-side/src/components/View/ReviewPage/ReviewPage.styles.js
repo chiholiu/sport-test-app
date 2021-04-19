@@ -6,7 +6,12 @@ export const ReviewPage = styled.div`
 `;
 
 export const ReviewPageContainer = styled.div`
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const Form = styled.form`
@@ -32,8 +37,11 @@ export const Input = styled.textarea`
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.black};
   color: ${({ theme }) => theme.colors.white};
-  min-width: 100px;
-  height: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  max-width: 200px;
+  height: 35px;
+  margin-right: auto;
   &:disabled {
     cursor: unset;
   }

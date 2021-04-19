@@ -4,6 +4,9 @@ import { breakpoint } from "../../../../../styles/BreakPoint";
 export const ReviewContainer = styled.div`
   width: 100%;
   text-transform: capitalize;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const FirstBlock = styled.div`
@@ -39,11 +42,14 @@ export const ReviewPrice = styled.p`
   font-weight: ${({ theme }) => theme.fontWeights.extraBold};
   color: ${({ theme }) => theme.colors.red};
   margin-top: 20px;
+  ${breakpoint.md`
+    font-size: 24px;
+  `}
 `;
 
 export const Column = styled.div`
   flex: 0 0 50%;
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
   text-align: center;
   ${breakpoint.md`
     text-align: left;
@@ -80,6 +86,7 @@ export const ProductName = styled.div`
     width: 300px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-weight: ${({ theme }) => theme.fontWeights.semiBold};
     margin-top: -20px;
   `}
 `;

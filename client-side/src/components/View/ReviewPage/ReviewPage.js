@@ -13,13 +13,13 @@ import ReactStars from "react-rating-stars-component";
 const Review = ({ reviews, getProductId }) => {
   if (reviews == undefined || getProductId == undefined) return;
 
-  if (reviews.length < 1) {
-    return <Redirect to="/" />;
-  }
-
   const [openForm, setOpenForm] = useState(false);
   const [starRating, setStarRating] = useState(0);
   const [inputValue, setInputValue] = useState("");
+
+  if (reviews.length < 1) {
+    return <Redirect to="/" />;
+  }
 
   let submit = starRating == 0 && inputValue.length < 1;
 
@@ -63,7 +63,7 @@ const Review = ({ reviews, getProductId }) => {
   return (
     <ReviewPage>
       <ReviewPageContainer>
-        <Button clickPage={() => previousPage()}>Go Back</Button>
+        <Button onClick={() => previousPage()}> &lt; Go Back</Button>
         <ReviewBlock reviewContent={reviews} />
         <ReviewForm>
           {openForm && (
