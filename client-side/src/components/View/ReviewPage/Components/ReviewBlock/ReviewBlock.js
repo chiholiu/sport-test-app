@@ -16,6 +16,7 @@ import {
 } from "./ReviewBlock.styles";
 
 export const ReviewBlock = ({ reviewContent }) => {
+  console.log(reviewContent);
   if (reviewContent == undefined) return;
 
   return (

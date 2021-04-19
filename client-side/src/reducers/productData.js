@@ -3,7 +3,6 @@ import { types } from "../actions";
 const initialState = {
   products: [],
   searchText: "",
-  filteredProducts: [],
   productId: []
 };
 
