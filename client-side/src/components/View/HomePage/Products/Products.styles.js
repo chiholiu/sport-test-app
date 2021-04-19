@@ -6,7 +6,7 @@ export const ProductPage = styled.ul`
   display: flex;
   flex-direction: column;
   ${breakpoint.md`
-    padding-top: 10px;
+    padding-top: 100px;
     flex-wrap: wrap;
     flex-direction: row;
     max-width: 1200px;
