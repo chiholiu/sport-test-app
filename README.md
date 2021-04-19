@@ -81,6 +81,5 @@ Run React App
 - react-scripts 4.0.3",
 - redux ^4.0.5",
 - redux-thunk ^2.3.0",
-- source-map-loader ^2.0.1",
 - styled-components ^5.2.3",
 - web-vitals ^1.0.1"
