@@ -28,7 +28,7 @@ In the project directory, you can run:
 
 ### How to run the app
 
-Run Docker(Make sure you installed Docker on your local machine and if you download latest version of Docker, just update macOS is updated to version 11)
+Run Docker(Make sure you installed Docker on your local machine and if you download latest version of Docker, just update macOS to version 11)
 
 - brew cask install docker
 - docker-compose up
