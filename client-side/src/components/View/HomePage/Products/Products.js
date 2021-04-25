@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { useDispatch } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { getData, getId } from "../../../../actions/index";
 import axios from "axios";
 import PropTypes from "prop-types";
