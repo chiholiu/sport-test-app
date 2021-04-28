@@ -10,15 +10,13 @@ export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyleReset />
-      <div className="App" data-testid="app-component">
-        <header className="App-header">
+        <div className="App" data-testid="app-component">
           <Switch>
             <Route exact path="/" render={() => <HomePage />} />
             <Route path="/product" render={() => <ReviewPage />} />
             <Route path="*" render={() => <Redirect to={{ path: "/" }} />} />
           </Switch>
-        </header>
-      </div>
+        </div>
     </ThemeProvider>
   );
 };
